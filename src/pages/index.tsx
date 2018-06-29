@@ -26,75 +26,43 @@ export default (props: IndexPageProps) =>
       />
       <Container text>
         <Header inverted as="h1">10th Planet Huntsville</Header>
-        <Button primary size="huge">Get started!</Button>
+        <Button className="blue" size="huge">Get started!</Button>
       </Container>
     </Segment>
 
-    {/* About this starter */}
-    <Segment vertical className="stripe">
-      <Grid stackable verticalAlign="middle" className="container">
-        <Grid.Row>
-          <Grid.Column width="8">
-            <Header>Lorem ipsum</Header>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Porro laudantium ad, quae, perspiciatis ipsa distinctio.
-                </p>
-            <Header>Dolor sit amet</Header>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Porro laudantium ad, quae, perspiciatis ipsa distinctio.
-                </p>
-          </Grid.Column>
-          <Grid.Column width="6" floated="right">
-            {/* TODO replace with a pretty GIF */}
-            <Header>Lorem ipsum</Header>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Porro laudantium ad, quae, perspiciatis ipsa distinctio.
-                </p>
-            <Header>Dolor sit amet</Header>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Porro laudantium ad, quae, perspiciatis ipsa distinctio.
-                </p>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
+    {/* Schedule */}
+    <Segment vertical className="stripe schedule" textAlign="center">
+      <Container>
+        <Header inverted as="h1">Class Schedule</Header>
+      </Container>
     </Segment>
 
-    {/* Key features */}
+    {/* Instructors */}
     <Segment vertical className="stripe alternate feature">
       <Grid columns="3" textAlign="center" divided relaxed stackable className="container">
         <Grid.Row>
           <Grid.Column>
             <Header icon>
               <Icon name="wizard"></Icon>
-              A kind of magic!
+              Brandon Mccaghren
             </Header>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Voluptas eaque at quae cupiditate aspernatur quibusdam!
-                  Distinctio quod non, harum dolorum earum molestias,
-                  beatae expedita aliquam dolorem asperiores nemo amet quaerat.
+              Brandon Mccaghren earned his Brazilian Jiu Jitsu Black Belt under Eddie Bravo and was the first 10th Planet Instructor in the entire Southeastern United States. He has received each of his Jiu Jitsu ranks directly from Eddie Bravo. In addition to being an experienced teacher and Black belt in the Traditional Martial Arts, Brandon has staked his claim as one of the top grappling competitors in the Southeast by taking titles in Kakuto, Good Fight, IBJJF, NAGA, and even Freestyle Judo to name just a few. He has also led 10th Planet to multiple Team Titles at many of these same events.
                 </p>
           </Grid.Column>
           <Grid.Column>
             <Header icon>
               <Icon name="wizard"></Icon>
-              A kind of magic!
+              Eric Ow
             </Header>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Voluptas eaque at quae cupiditate aspernatur quibusdam!
-                  Distinctio quod non, harum dolorum earum molestias,
-                  beatae expedita aliquam dolorem asperiores nemo amet quaerat.
-                </p>
+
+            </p>
           </Grid.Column>
           <Grid.Column>
             <Header icon>
               <Icon name="wizard"></Icon>
-              A kind of magic!
+              Jacob Sandlin
             </Header>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -105,5 +73,11 @@ export default (props: IndexPageProps) =>
           </Grid.Column>
         </Grid.Row>
       </Grid>
+    </Segment>
+    {/* Map and directions */}
+    <Segment vertical textAlign="center" className="stripe alternate feature">
+      <Container>
+        Map and directions
+      </Container>
     </Segment>
   </div>;

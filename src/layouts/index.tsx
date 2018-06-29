@@ -2,7 +2,8 @@ import Link from "gatsby-link";
 import * as React from "react";
 import HeaderMenu from "../components/HeaderMenu/HeaderMenu";
 import SidebarMenu from "../components/SidebarMenu/SidebarMenu";
-import { Segment, Icon, Container, Sidebar, Button } from "semantic-ui-react";
+import { Segment, Icon, Container, Sidebar, Button, Grid } from "semantic-ui-react";
+import { SocialIcon } from 'react-social-icons';
 import "../css/styles.css";
 import "../css/responsive.css";
 import "../css/semantic.min.css";
@@ -50,7 +51,19 @@ export default class DefaultLayout extends React.PureComponent<DefaultLayoutProp
             {/* Footer */}
             <Segment inverted vertical style={{ position: "absolute", bottom: 0, width: "100%" }}>
               <Container textAlign="center">
-                <p>Powered with <Icon name="heart" /> by Gatsby 1.0</p>
+                <Grid columns={3} divided>
+                  <Grid.Row>
+                    <Grid.Column>
+                      10th Planet Huntsville
+                    </Grid.Column>
+                    <Grid.Column>
+                      <SocialIcon color="white" url="https://www.facebook.com/10thplanethuntsville" />
+                    </Grid.Column>
+                    <Grid.Column>
+                      <SocialIcon color="white" url="https://www.instagram.com/10thplanethuntsville" />
+                    </Grid.Column>
+                  </Grid.Row>
+                </Grid>
               </Container>
             </Segment>
           </Sidebar.Pusher>

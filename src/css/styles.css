@@ -5,6 +5,11 @@
 .masthead.segment {
   min-height: 700px;
   padding: 1em 0;
+  background: url("../images/gym2.jpg") no-repeat center center fixed !important; 
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
 }
 
 .masthead .logo.item img {
@@ -17,7 +22,7 @@
 
 .masthead h1.ui.header {
   margin-top: 3em;
-  margin-bottom: 0;
+  margin-bottom: 2em;
   font-size: 4em;
   font-weight: normal;
 }
@@ -28,7 +33,7 @@
 }
 
 .ui.vertical.stripe {
-  padding: 8em 0;
+  padding: 4em 0;
 }
 
 .ui.vertical.stripe h3 {
@@ -53,7 +58,7 @@
 }
 
 .ui.stripe.alternate {
-  background-color: #f2f3f5;
+  background-color: #3D348B;
 }
 
 .quote.stripe.segment {
@@ -65,12 +70,17 @@
   padding-bottom: 5em;
 }
 
-.footer.segment {
-  padding: 5em 0;
-}
-
 .secondary.pointing.menu .toc.item {
   display: none;
+}
+
+.ui.vertical.stripe.schedule {
+  background-color: #2185D0;
+  min-height:500px;
+}
+
+.footer.segment {
+  padding: 5em 0;
 }
 
 @media only screen and (max-width: 700px) {
