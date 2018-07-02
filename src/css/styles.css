@@ -5,7 +5,7 @@
 .masthead.segment {
   min-height: 700px;
   padding: 1em 0;
-  background: url("../images/gym2.jpg") no-repeat center center fixed !important; 
+  background: url("../images/gym2.png") no-repeat center center fixed !important; 
   -webkit-background-size: cover !important;
   -moz-background-size: cover !important;
   -o-background-size: cover !important;
@@ -22,7 +22,6 @@
 
 .masthead h1.ui.header {
   margin-top: 3em;
-  margin-bottom: 2em;
   font-size: 4em;
   font-weight: normal;
 }
