@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `My website`,
+    title: `10th Planet Huntsville`,
     googleVerification: `abcdefz`,
     disqus: `gatsby-typescript`
   },
   mapping: {
-    'MarkdownRemark.frontmatter.author': `AuthorJson`
+    "MarkdownRemark.frontmatter.author": `AuthorJson`
   },
   plugins: [
     // Expose `/data` to graphQL layer
@@ -16,11 +16,16 @@ module.exports = {
         path: `${__dirname}/data`
       }
     },
-
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`bangers`]
+      }
+    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: 'YOUR_GOOGLE_ANALYTICS_TRACKING_ID',
+        trackingId: "YOUR_GOOGLE_ANALYTICS_TRACKING_ID",
         // Puts tracking script in the head instead of the body
         head: false,
         // Setting this parameter is optional
@@ -66,8 +71,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby website`,
-        short_name: `Gatsby website`,
+        name: `10th Planet Huntsville`,
+        short_name: `10hpsv`,
         start_url: `/`,
         background_color: `#f7f7f7`,
         theme_color: `#191919`,

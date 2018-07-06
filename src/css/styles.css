@@ -5,7 +5,7 @@
 .masthead.segment {
   min-height: 700px;
   padding: 1em 0;
-  background: url("../images/gym2.png") no-repeat center center fixed !important; 
+  background: url("../images/gym2.png") no-repeat center center fixed !important;
   -webkit-background-size: cover !important;
   -moz-background-size: cover !important;
   -o-background-size: cover !important;
@@ -24,6 +24,11 @@
   margin-top: 3em;
   font-size: 4em;
   font-weight: normal;
+  font-family: "Bangers", cursive;
+}
+.hero10 {
+  color: #4e68b3;
+  font-size: 1.5em;
 }
 
 .masthead h2 {
@@ -36,7 +41,13 @@
 }
 
 .ui.vertical.stripe h3 {
-  font-size: 2em;
+  font-size: 3.5em;
+  font-weight: normal;
+  margin-bottom: 2em;
+  font-family: "Bangers", cursive;
+  letter-spacing: 3px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .ui.vertical.stripe .button + h3,
@@ -57,7 +68,7 @@
 }
 
 .ui.stripe.alternate {
-  background-color: #3D348B;
+  background-color: #3d348b;
 }
 
 .quote.stripe.segment {
@@ -73,9 +84,17 @@
   display: none;
 }
 
+.lead-capture {
+  margin-top: 14em;
+}
+
 .ui.vertical.stripe.schedule {
-  background-color: #2185D0;
-  min-height:500px;
+  background-color: #4e68b3;
+  min-height: 500px;
+}
+
+.ui.vertical.stripe.instructors {
+  min-height: 500px;
 }
 
 .footer.segment {
@@ -95,6 +114,10 @@
   .masthead h2 {
     margin-top: 0.5em;
     font-size: 1.5em;
+  }
+
+  .lead-capture {
+    margin-top: 4em;
   }
 }
 

@@ -8,7 +8,8 @@ interface InstructorProps extends React.HTMLProps<HTMLDivElement> {}
 
 export default (props: InstructorProps) => {
   return (
-    <Segment vertical className="stripe alternate feature">
+    <Segment textAlign="center" vertical className="stripe instructors">
+      <Header as="h3">Instructors</Header>
       <Grid
         columns="3"
         textAlign="center"
