@@ -1,14 +1,52 @@
 import * as React from "react";
+import * as Calendar from "react-big-calendar";
+import "react-big-calendar/lib/css/react-big-calendar.css";
+import * as moment from "moment";
+Calendar.setLocalizer(Calendar.momentLocalizer(moment));
 
-export interface ScheduleProps {}
+interface ScheduleProps {}
+interface ScheduleState {
+  events: any;
+}
 
-export default class Schedule extends React.Component<ScheduleProps, any> {
+export default class Schedule extends React.Component<
+  ScheduleProps,
+  ScheduleState
+> {
+  constructor(props: ScheduleProps) {
+    super(props);
+    this.state = {
+      events: [
+        {
+          title: "All Levels BJJ",
+          start: new Date(new Date().setHours(new Date().getHours() - 3)),
+          end: new Date(new Date().setHours(new Date().getHours() + 3))
+        },
+        {
+          title: "BJJ Fundamentals",
+          start: new Date(new Date().setHours(new Date().getHours() - 3)),
+          end: new Date(new Date().setHours(new Date().getHours() + 3))
+        },
+        {
+          title: "Open Mat",
+          start: new Date(new Date().setHours(new Date().getHours() - 3)),
+          end: new Date(new Date().setHours(new Date().getHours() + 3))
+        }
+      ]
+    };
+  }
   public render() {
     return (
       <div>
-        <iframe
-          src="https://trial-2E517811.zenplanner.com/zenplanner/portal/calendar.cfm?frame=true"
-          id="idZenPlannerFrame"
+        <Calendar
+          defaultDate={new Date()}
+          defaultView="week"
+          toolbar={false}
+          timeslots={6}
+          step={30}
+          events={this.state.events}
+          selectable={false}
+          style={{ height: "100vh" }}
         />
       </div>
     );

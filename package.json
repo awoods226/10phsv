@@ -26,6 +26,7 @@
   "dependencies": {
     "@types/lodash": "^4.14.63",
     "@types/react": "^16.0.20",
+    "@types/react-big-calendar": "^0.18.1",
     "@types/react-dom": "^16.0.2",
     "@types/react-helmet": "5.0.0",
     "@types/react-redux": "^5.0.9",
@@ -34,7 +35,7 @@
     "@types/semantic-ui": "^2.2.6",
     "babel-eslint": "^7.2.1",
     "change-case": "^3.0.1",
-    "codeclimate-test-reporter": "^0.4.1",
+    "codeclimate-test-reporter": "^0.5.0",
     "disqus-react": "^1.0.5",
     "gatsby": "latest",
     "gatsby-link": "latest",
@@ -55,8 +56,10 @@
     "gatsby-transformer-sharp": "latest",
     "graphql-code-generator": "^0.5.2",
     "gray-matter": "^2.1.1",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.2",
     "react": "^16.0.0",
+    "react-big-calendar": "^0.19.2",
     "react-dom": "^16.0.0",
     "react-helmet": "5.0.3",
     "react-redux": "^5.0.6",
@@ -83,8 +86,8 @@
     "@types/storybook__addon-options": "^3.2.0",
     "@types/storybook__react": "^3.0.5",
     "@types/webpack-env": "^1.13.1",
-    "enzyme": "^3.0.0",
-    "enzyme-adapter-react-16": "^1.0.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint-config-xo-react": "0.11.1",
     "eslint-plugin-react": "6.10.3",
     "flat": "^2.0.1",
@@ -103,7 +106,7 @@
     "stylelint-config-standard": "^16.0.0",
     "ts-jest": "19.0.8",
     "ts-lint": "4.5.1",
-    "xo": "^0.18.1"
+    "xo": "^0.21.1"
   },
   "keywords": [
     "gatsby",
