@@ -1,5 +1,22 @@
+.mobile-schedule-container {
+  display: none;
+}
+
+.calendar-container {
+  display: inherit;
+  background-color: white;
+}
+
 @media only screen and (max-width: 700px) {
   .rbc-calendar {
     display: none;
+  }
+  .calendar-container {
+    display: none;
+  }
+  .mobile-schedule-container {
+    display: inherit;
+    background-color: white;
+    padding: 20px;
   }
 }
