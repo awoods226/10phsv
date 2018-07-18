@@ -4,21 +4,20 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 import "./schedule.css";
 import * as moment from "moment";
 import { List } from "semantic-ui-react";
-Calendar.setLocalizer(Calendar.momentLocalizer(moment));
 
+// Calendar.setLocalizer(Calendar.momentLocalizer(moment));
 interface ScheduleProps {}
 interface ScheduleState {
-  events: any;
+  events: any[];
 }
-
 export default class Schedule extends React.Component<
   ScheduleProps,
   ScheduleState
 > {
-  constructor(props: ScheduleProps) {
+  constructor(props) {
     super(props);
     this.state = {
-      events: []
+      events: [],
     };
   }
   getEventSchedule = (
@@ -27,25 +26,25 @@ export default class Schedule extends React.Component<
     startHour: number,
     startMin: number,
     endHour: number,
-    endMin: number
+    endMin: number,
   ) => {
-    let daysWithTimes = days.map(v => {
+    let daysWithTimes = days.map((v) => {
       return moment().day(v);
     });
-    return daysWithTimes.map(v => {
+    return daysWithTimes.map((v) => {
       return {
-        title: title,
+        end: v
+          .hours(endHour)
+          .minutes(endMin)
+          .toDate(),
         start: v
           .hours(startHour)
           .minutes(startMin)
           .toDate(),
-        end: v
-          .hours(endHour)
-          .minutes(endMin)
-          .toDate()
+        title,
       };
     });
-  };
+  }
   getFundamentalsEvents = () => {
     return this.getEventSchedule(
       "BJJ Fundamentals",
@@ -53,12 +52,12 @@ export default class Schedule extends React.Component<
       18,
       0,
       19,
-      30
+      30,
     );
-  };
+  }
   getAllLevelsEvents = () => {
     return this.getEventSchedule("All Levels BJJ", ["Monday"], 19, 30, 21, 0);
-  };
+  }
   getEvents = () => {
     let events = [];
     let allLevels = this.getAllLevelsEvents();
@@ -70,26 +69,26 @@ export default class Schedule extends React.Component<
     let muayThai = this.getMuayThaiEvents();
     events.push(...muayThai);
     return events;
-  };
+  }
   getOpenMatEvents = () => {
     return this.getEventSchedule("Open Mat", ["Saturday"], 10, 0, 12, 0);
-  };
+  }
   getMuayThaiEvents = () => {
     return this.getEventSchedule("Muay Thai", ["Wednesday"], 20, 0, 21, 0);
-  };
+  }
   componentDidMount() {
     let schedule = this.getEvents();
     let events = [];
-    schedule.map(s => {
+    schedule.map((s) => {
       events.push(s);
     });
-    this.setState({ events: events });
+    this.setState({ events });
   }
   public render() {
     return (
       <div>
         <div className="calendar-container">
-          <Calendar
+          <Calendar.default
             defaultDate={new Date()}
             defaultView="week"
             toolbar={false}

@@ -3,6 +3,8 @@ import Link from "gatsby-link";
 import HeaderMenu from "../components/HeaderMenu/HeaderMenu";
 import { menuItems } from "../layouts";
 import { Button, Segment, Container, Header, Grid } from "semantic-ui-react";
+import { SocialIcon } from "react-social-icons";
+import Footer from "../components/Footer/Footer";
 import Instructors from "../components/Instructors/Instructors";
 import LeadCapture from "../components/LeadCapture/LeadCapture";
 import Schedule from "../components/Schedule/Schedule";
@@ -48,5 +50,6 @@ export default (props: IndexPageProps) => (
     <Segment vertical textAlign="center" className="stripe alternate feature">
       <Container>Map and directions</Container>
     </Segment>
+    <Footer />
   </div>
 );
